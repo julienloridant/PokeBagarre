@@ -30,12 +30,12 @@ jobs:
         java-version: '18'
         distribution: 'corretto'
 
-    - name: Test Report
+    - name: Test Reporter
       uses: dorny/test-reporter@v1
       if: success() || failure()    # run this step even if previous step failed
       with:
         name: JEST Tests            # Name of the check run which will be created
-        path: reports/jest-*.xml    # Path to test results
+        path: build\test-results\test\TEST-*.xml    # Path to test results
         reporter: jest-junit
 
     # Configure Gradle for optimal use in GiHub Actions, including caching of downloaded dependencies.
