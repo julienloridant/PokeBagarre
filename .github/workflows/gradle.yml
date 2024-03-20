@@ -1,4 +1,4 @@
-# This workflow uses actions that are not certified by GitHub.
+a# This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
 # documentation.
@@ -35,7 +35,7 @@ jobs:
       if: success() || failure()    # run this step even if previous step failed
       with:
         name: JUnit Tests           # Name of the check run which will be created
-        path: build/test-results/test/TEST-*.xml    # Path to test results
+        path: Pokebagarre/build/test-results/test/TEST-*.xml    # Path to test results
         reporter: java-junit
 
     # Configure Gradle for optimal use in GiHub Actions, including caching of downloaded dependencies.
